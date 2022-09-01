@@ -1,0 +1,12 @@
+var input = require('fs').readFileSync('/dev/stdin', 'utf8');
+var data = input.split('\n');
+var data1 = data.shift();
+var data2 = data.shift();
+var space1 = data1.split(' ');
+var space2 = data2.split(' ');
+var x1 = parseFloat(space1.shift());
+var y1 = parseFloat(space1.shift());
+var x2 = parseFloat(space2.shift());
+var y2 = parseFloat(space2.shift());
+var length = (Math.sqrt(Math.pow((x2 - x1), 2) + Math.pow((y2 - y1), 2))).toFixed(4);
+console.log(`${length}`);
